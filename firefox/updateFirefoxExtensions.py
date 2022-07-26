@@ -17,7 +17,7 @@ def getDownloadLink(ext):
     return link[0]
 
 def filename(ext):
-    return ext + ".zip"
+    return ext + ".xpi"
 
 def downloadLink(ext):
     os.system("curl -L " + getDownloadLink(ext) + " -o out/" + filename(ext))

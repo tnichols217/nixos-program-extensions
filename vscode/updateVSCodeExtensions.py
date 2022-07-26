@@ -9,7 +9,7 @@ with open("./extensions.conf", "r") as f:
 exts = [j.split(".") for j in i]
 
 def filename(ext):
-    return ext[0] + "." + ext[1] + ".xpi"
+    return ext[0] + "." + ext[1] + ".zip"
 
 def extLink(ext):
     return "https://" + ext[0] + ".gallery.vsassets.io/_apis/public/gallery/publisher/" + ext[0] + "/extension/" + ext[1] + "/latest/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"

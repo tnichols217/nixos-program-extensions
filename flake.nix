@@ -9,12 +9,14 @@
     in {
       devShell = pkgs.mkShell {
         nativeBuildInputs = with pkgs; [
-          nodejs
-          yarn
-          nodePackages.npm
-          nodePackages.nodemon
+          python310
+          python310Packages.requests
         ];
         buildInputs = [ ];
+      };
+
+      packages = {
+        unrouted_pcb = pkgs.callPackage ./src/pcb.pkg.nix {};
       };
     });
 }

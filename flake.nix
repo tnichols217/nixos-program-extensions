@@ -14,9 +14,5 @@
         ];
         buildInputs = [ ];
       };
-
-      packages = {
-        unrouted_pcb = pkgs.callPackage ./src/pcb.pkg.nix {};
-      };
     });
 }

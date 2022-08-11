@@ -1,4 +1,1 @@
-cd firefox
-python updateFirefoxExtensions.py
-cd ../vscode
-python updateVSCodeExtensions.py
+nix develop -c sh updateUnwrapped.sh

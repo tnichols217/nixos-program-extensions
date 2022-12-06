@@ -14,5 +14,9 @@
         ];
         buildInputs = [ ];
       };
+      packages = rec {
+        extensions = pkgs.callPackage ./extensions.pkg.nix {};
+        default = extensions;
+      };
     });
 }

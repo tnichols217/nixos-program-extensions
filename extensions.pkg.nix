@@ -18,6 +18,7 @@ pkgs.stdenv.mkDerivation rec {
   sh extract.sh
   cd ../vscode
   sh extract.sh
+  cd ..
 
   '';
 

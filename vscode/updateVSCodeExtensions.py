@@ -18,12 +18,12 @@ def downloadLink(ext):
     os.system("curl -L " + extLink(ext) + " -o out/" + filename(ext))
 
 def generateTarChunks():
-    os.system("rm out.tar")
+    os.system("rm -f out.tar")
     os.system("tar -cf out.tar out")
     pathlib.Path("./chunks").mkdir(exist_ok=True)
-    os.system("rm chunks/*")
+    os.system("rm -f chunks/*")
     os.system("split -b 50M out.tar chunks/out.tar.")
-    os.system("rm out.tar")
+    os.system("rm -f out.tar")
 
 pathlib.Path("./out").mkdir(exist_ok=True)
 [path.unlink() for path in pathlib.Path("./out").glob("*")]

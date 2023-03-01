@@ -1,1 +1,1 @@
-nix develop -c sh updateUnwrapped.sh
+nix develop --builders "" -c sh updateUnwrapped.sh

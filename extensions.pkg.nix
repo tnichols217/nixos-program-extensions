@@ -16,8 +16,8 @@ pkgs.stdenv.mkDerivation rec {
 
   cd firefox
   sh extract.sh
-  cd ../vscode
-  sh extract.sh
+  # cd ../vscode
+  # sh extract.sh
   cd ..
 
   '';
@@ -28,7 +28,7 @@ pkgs.stdenv.mkDerivation rec {
   mkdir $out
 
   cp -r firefox/out $out/firefox
-  cp -r vscode/out $out/vscode
+  # cp -r vscode/out $out/vscode
 
   '';
 

@@ -18,5 +18,12 @@
         extensions = pkgs.callPackage ./extensions.pkg.nix {};
         default = extensions;
       };
+      apps = rec {
+        update = {
+          type = "app";
+          program = ./nix/scripts/update.sh;
+        };
+        default = update;
+      };
     });
 }

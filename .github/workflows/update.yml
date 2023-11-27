@@ -1,0 +1,13 @@
+name: Update repo
+run-name: ${{ github.actor }} is updating the extensions
+on:
+  schedule:
+    - cron: "0 0/6 * * *"
+jobs:
+  downloadUpdates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: cachix/install-nix-action@v23
+      - run: nix run
+      - uses: stefanzweifel/git-auto-commit-action@v5

@@ -3,6 +3,8 @@ run-name: ${{ github.actor }} is updating the extensions
 on:
   schedule:
     - cron: "0 0/6 * * *"
+  workflow_dispatch:
+  push:
 jobs:
   downloadUpdates:
     runs-on: ubuntu-latest

@@ -8,6 +8,8 @@ on:
 jobs:
   downloadUpdates:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
       - uses: cachix/install-nix-action@v23
